@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="icon" href="../Assets/img/M.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalogo</title>
+  <link rel="stylesheet" href="../Catalogo/catalogo.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="arriba">
+      <a href="../Inicio/inicio.html">
+        <div class="arribaD">
+          <p id="t">MACA</p>
+        </div>
+      </a>
+
+
+      <div class="iconos">
+        <div class="menu">
+          <div class="reng" data-text="Inicio">
+            <a href="../Inicio/inicio.html">
+              <img src="../Assets/img/casa.png" width="35px" />
+            </a>
+          </div>
+          <div class="reng" data-text="Catálogo">
+            <a href="../Catalogo/catalogo.html">
+              <img src="../Assets/img/revista.png" width="35px" />
+            </a>
+          </div>
+          <div class="reng" data-text="Carrito">
+            <a href="#">
+              <img class="icont-cart" src="../Assets/img/carrito.png" width="35px" />
+              <div class="count-products">
+                <span id="contador-productos">0</span>
+              </div>
+            </a>
+            <div class="container-cart-products hidden-cart">
+
+              <div class="row-product">
+              
+              </div>
+
+              <div class="cart-total">
+                <h3>Total:</h3>
+                <span class="total">$0</span>
+                <button onclick="hacerPedido()">Hacer pedido</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <ul class="menuC">
+          <li class="producto" data-text="Anillos">
+            <a target="_blank" href="../Anillos/anillos.html"><img src="../Assets/Anillos/anillo19.jpeg" /></a>
+          </li>
+          <li class="producto" data-text="Mini Earcuff">
+            <a target="_blank" href="../Mini Earcuff/MEA.html"><img src="../Assets/AROS/ARO23.jpeg" /></a>
+          </li>
+          <li class="producto" data-text="Earcuff">
+            <a target="_blank" href="../Earcuff/EA.html"><img src="../Assets/EAR/EAR4.jpeg" /></a>
+          </li>
+          <li class="producto" data-text="Aretes">
+            <a target="_blank" href="../Aretes Rodio/aretesR.html"><img src="../Assets/RO/RO1.jpeg" /></a>
+          </li>
+          <li class="producto" data-text="Aretes San Agustin">
+            <a target="_blank" href="../Aretes San Agustin/aretesS.html"><img src="../Assets/Aretes/SAN1.jpeg" /></a>
+          </li>
+          <li class="producto" data-text="Manillas">
+            <a target="_blank" href="../Manillas/manillas.html"><img src="../Assets/Manillas/Man3.jpeg" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="laterald">
+      <ul class="lateral">
+        <li class="i">
+          <a target="_blank" href="https://maps.app.goo.gl/vWGCgS8Swg92t3Cu5"><img src="../Assets/img/ub.png"
+              width="50px" style="margin: 10px" /></a>
+        </li>
+        <li class="i">
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=573138257940"><img
+              src="../Assets/img/WhatsApp.webp" width="50px" style="margin: 10px" /></a>
+        </li>
+        <li class="i">
+          <a target="_blank" href="https://www.instagram.com/macajoyasyaccesorioss?igsh=eTZwZDhzNGI3cjd4"><img
+              src="../Assets/img/insta.webp" width="50px" style="margin: 10px" /></a>
+        </li>
+        <li class="i">
+          <a target="_blank" href="https://www.facebook.com/share/VB3is2VHmngf8gDu/?mibextid=qi2Omg"><img
+              src="../Assets/img/facebook.webp" width="50px" style="margin: 10px" /></a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="java/peleas.js"></script>
+  </main>
+  <script src="../JS/index.js"></script>
+</body>
+
+</html>

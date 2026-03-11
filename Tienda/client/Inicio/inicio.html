@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="icon" href="../Assets/img/M.jpg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./inicio.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  
+    <body> <header>
+      <div class="arriba">
+        <a href="../Inicio/inicio.html">
+          <div class="arribaD">
+            <p id="t">MACA</p>
+          </div>
+        </a>
+  
+  
+        <div class="iconos">
+          <div class="menu">
+            <div class="reng" data-text="Inicio">
+              <a href="../Inicio/inicio.html">
+                <img src="../Assets/img/casa.png" width="35px" />
+              </a>
+            </div>
+            <div class="reng" data-text="Catálogo">
+              <a href="../Catalogo/catalogo.html">
+                <img src="../Assets/img/revista.png" width="35px" />
+              </a>
+            </div>
+            <div class="reng" data-text="Carrito">
+              <a href="#">
+                <img class="icont-cart" src="../Assets/img/carrito.png" width="35px" />
+                <div class="count-products">
+                  <span id="contador-productos">0</span>
+                </div>
+              </a>
+              <div class="container-cart-products hidden-cart">
+  
+                <div class="row-product">
+                
+                </div>
+  
+                <div class="cart-total">
+                  <h3>Total:</h3>
+                  <span class="total">$0</span>
+                  <button onclick="hacerPedido()">Hacer pedido</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+    </header>
+      <main>
+
+      <div class="izquierda">
+        <div class="texto1">
+          <h2>¿Quienes somos?</h2>
+          <br />
+
+          <p>
+            Somos una marca de joyeria, con un enfoque en la calidad y el diseño
+            de las piezas, encontrando en ellas exclusividad y versatilidad.
+            Nuestra misión es ofrecer joyas que inspiren a las personas a
+            sentirse seguras y seguros de sí mismos, conservando la pasión por
+            nuestra cultura
+          </p>
+        </div>
+
+        <div class="texto2">
+          <h2>Nuestros valores</h2>
+          <br />
+          <p>
+            En nuestra marca valoramos la creatividad, la calidad y nuestra
+            riqueza colombiana. Por ello nuestros diseños reflejan la diversidad
+            de fauna, flora y cultura que encontramos en nuestro pais; entre
+            otros diseños.
+          </p>
+        </div>
+
+        <img
+          src="../Assets/img/camilaInicio.jpeg"
+          width="347"
+          style="margin-left: 30px; margin-top: 30px"
+        />
+      </div>
+
+      <div class="derecha">
+        <div class="carousel-container">
+          <div class="carousel">
+            <img src="../Assets/img/img1.jpeg" alt="Imagen 1" />
+            <img src="../Assets/img/img2.jpeg" alt="Imagen 2" />
+            <img src="../Assets/img/img3.jpeg" alt="Imagen 3" />
+          </div>
+        </div>
+
+        <div class="derecha-d">
+          <ul class="iconos2">
+            <li class="i">
+              <a
+                target="_blank"
+                href="https://maps.app.goo.gl/vWGCgS8Swg92t3Cu5"
+                ><img
+                  src="../Assets/img/ub.png"
+                  width="50px"
+                  style="margin: 10px"
+              /></a>
+            </li>
+            <li class="i">
+              <a target="_blank" href="wa.me/573138257940"
+                ><img
+                  src="../Assets/img/WhatsApp.webp"
+                  width="50px"
+                  style="margin: 10px"
+              /></a>
+            </li>
+            <li class="i">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/macajoyasyaccesorioss?igsh=eTZwZDhzNGI3cjd4"
+                ><img
+                  src="../Assets/img/insta.webp"
+                  width="50px"
+                  style="margin: 10px"
+              /></a>
+            </li>
+            <li class="i">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/share/VB3is2VHmngf8gDu/?mibextid=qi2Omg"
+                ><img
+                  src="../Assets/img/facebook.webp"
+                  width="50px"
+                  style="margin: 10px"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <script src="carusel.js"></script>
+    </main>
+    <script src="../JS/index.js"></script>
+  </body>
+
+</html>

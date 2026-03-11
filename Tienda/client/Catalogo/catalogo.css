@@ -1,0 +1,372 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*renglones*/
+
+ul {
+  list-style-type: none;
+  padding: 0%;
+  margin: 0px;
+}
+
+.f {
+  margin: 6%;
+  margin-top: 3%;
+  float: left;
+  transform: scale(1.2);
+  margin-bottom: 0px;
+  position: relative; /* Añadido para establecer un contexto de apilamiento */
+  z-index: 3; /* Asegura que .f esté por encima de .reng */
+}
+
+.reng {
+  text-decoration: none;
+  margin: 7%;
+  margin-top: 3%;
+  float: left;
+  margin-bottom: 0px;
+  transition: transform 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.reng:hover {
+  transform: scale(1.2);
+}
+
+.reng::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%; /* Sitúa el texto debajo del icono */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  color: white; /* Cambia el color del texto a blanco */
+  font-size: 14px; /* Cambia el tamaño de la fuente del texto */
+  font-weight: bold; /* Hace el texto en negrita */
+  text-align: center; /* Centra el texto horizontalmente */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Agrega un fondo oscuro semi-transparente */
+  padding: 5px 10px; /* Agrega un espacio alrededor del texto */
+  border-radius: 5px; /* Agrega bordes redondeados al fondo del texto */
+  transition: opacity 0.3s;
+  z-index: 2; /* Asegura que el texto esté por encima del carrusel */
+}
+
+.reng:hover::after {
+  opacity: 1;
+}
+
+.f::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%; /* Sitúa el texto debajo del icono */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  color: white; /* Cambia el color del texto a blanco */
+  font-size: 14px; /* Cambia el tamaño de la fuente del texto */
+  font-weight: bold; /* Hace el texto en negrita */
+  text-align: center; /* Centra el texto horizontalmente */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Agrega un fondo oscuro semi-transparente */
+  padding: 5px 10px; /* Agrega un espacio alrededor del texto */
+  border-radius: 5px; /* Agrega bordes redondeados al fondo del texto */
+  transition: opacity 0.3s;
+  z-index: 3; /* Asegura que el texto esté por encima del carrusel */
+}
+
+.f:hover::after {
+  opacity: 1;
+}
+
+/*barra de navegación*/
+
+.arribaD {
+  align-items: center;
+  width: 35%;
+  padding-left: 5%;
+  padding-top: 0px;
+  float: left;
+}
+
+.arriba {
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+  width: 100%;
+  float: left;
+  background-color: #677637;
+}
+
+#t {
+  font-size: 55px;
+  font-weight: 200;
+  margin-left: 10%;
+  color: #ffffff;
+  margin: 0px;
+  padding: 0px;
+}
+
+.iconos {
+  margin: 0px;
+  padding: 2px;
+  float: right;
+  width: 34%;
+  padding-left: 5%;
+}
+
+.item-container {
+  display: grid;
+}
+
+.item-image:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icon-cart {
+  stroke: #000;
+}
+
+.icon-cart:hover {
+  cursor: pointer;
+}
+
+.container-icon {
+  position: relative;
+}
+
+.count-products {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#contador-productos {
+  font-size: 10px;
+}
+
+.container-cart-products {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  width: 350px;
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.icon-close {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-close:hover {
+  stroke: red;
+  cursor: pointer;
+}
+
+.cart-product {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+
+.info-cart-product {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.8;
+}
+
+.titulo-producto-carrito {
+  font-size: 20px;
+}
+
+.precio-producto-carrito {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.catidad-producto-carrito {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+  height: 10px;
+}
+
+.cart-total {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.total-pagar {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.hidden-cart {
+  display: none;
+}
+
+.item-image img {
+  transition: transform 0.3s;
+}
+
+.item-image:hover img {
+  transform: scale(1.1);
+}
+
+.item-details {
+  padding: 15px 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/*redes sociales*/
+
+.i {
+  transition: transform 0.3s;
+  text-decoration: none;
+  float: left;
+  align-items: right;
+}
+
+.i:hover {
+  transform: scale(1.2);
+}
+
+/*footer*/
+
+.laterald {
+  width: 4%;
+  float: left;
+  padding: 30px;
+  padding-right: 20px;
+  text-align: right;
+}
+
+/*carrusel*/
+
+.carousel-container {
+  position: relative;
+  z-index: 1;
+  width: 88%;
+  display: flex;
+  overflow: hidden;
+  /*cambios recientes*/
+  float: left;
+  margin-top: 20px;
+  text-align: center;
+  /*cambios super recientes recientes*/
+  overflow-x: auto; /* Permite desplazamiento horizontal*/
+  white-space: nowrap;
+  margin-left: 40px;
+}
+
+.carousel-wrapper {
+  display: inline-block; /* Alinea los elementos en línea */
+  padding: 0px;
+}
+
+/*dentro del carrusel*/
+
+.menuC {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto; /* Permitir desplazamiento horizontal */
+  white-space: nowrap; /* Evitar el salto de línea */
+}
+
+.producto {
+  text-decoration: none;
+  margin: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px; /* Agrega un padding de 10px a cada lado para asegurar que el texto no esté demasiado pegado a la imagen */
+  transition: transform 0.3s;
+  position: relative;
+  z-index: 1;
+  /*organizar verticalemte*/
+  display: inline-block; /* Mostrar elementos en línea */
+  margin-right: 20px; /* Espacio entre elementos */
+  vertical-align: top; /* Alinear en la parte superior */
+  width: 27%;
+  height: 100%;
+}
+
+.producto img {
+  max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.producto:hover {
+  transform: scale(1.04);
+}
+
+.producto:after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0; /* Sitúa el texto en la parte inferior del contenedor */
+  left: 0; /* Alinea el texto a la izquierda */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  text-align: center; /* Centra el texto horizontalmente */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Agrega un fondo oscuro semi-transparente */
+  padding: 5px 0; /* Agrega un espacio alrededor del texto */
+  color: white; /* Cambia el color del texto a blanco */
+  font-size: 14px; /* Cambia el tamaño de la fuente del texto */
+  font-weight: bold; /* Hace el texto en negrita */
+  white-space: nowrap; /* Evita el salto de línea del texto */
+  transition: opacity 0.3s;
+  z-index: 3; /* Asegura que el texto esté por encima del carrusel */
+}
+
+.producto:hover::after {
+  opacity: 1;
+}
+
+.cart-empty {
+  padding: 20px;
+  text-align: center;
+}
