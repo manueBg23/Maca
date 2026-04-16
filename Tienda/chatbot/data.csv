@@ -1,0 +1,83 @@
+id,tipo,nombre_producto,modelo,precio
+1,anillo,Anillo 1,Clasico Oro,120000
+2,anillo,Anillo 2,Minimalista Plata,95000
+3,anillo,Anillo 3,Diamante Elegante,250000
+4,anillo,Anillo 4,Vintage Floral,130000
+5,anillo,Anillo 5,Moderno Geometrico,110000
+6,anillo,Anillo 6,Oro Blanco Premium,270000
+7,anillo,Anillo 7,Acero Inoxidable,80000
+8,anillo,Anillo 8,Perla Natural,150000
+9,anillo,Anillo 9,Grabado Especial,140000
+10,anillo,Anillo 10,Anillo Ajustable,70000
+11,anillo,Anillo 11,Luxury Gold,300000
+12,anillo,Anillo 12,Silver Line,90000
+13,anillo,Anillo 13,Black Edition,85000
+14,anillo,Anillo 14,Crystal Shine,160000
+15,anillo,Anillo 15,Rose Gold,135000
+16,anillo,Anillo 16,Infinity Ring,145000
+17,anillo,Anillo 17,Classic Premium,200000
+18,anillo,Anillo 18,Simple Band,60000
+19,anillo,Anillo 19,Modern Edge,125000
+20,anillo,Anillo 20,Golden Touch,180000
+21,anillo,Anillo 21,Urban Style,95000
+22,anillo,Anillo 22,Elite Diamond,350000
+23,anillo,Anillo 23,Soft Curve,88000
+24,anillo,Anillo 24,Engraved Love,155000
+25,anillo,Anillo 25,Artisan Crafted,210000
+26,anillo,Anillo 26,Minimal Gold,99000
+27,anillo,Anillo 27,Premium Stone,275000
+
+28,miniearcuff,MiniEarcuff 1,Silver Clip,45000
+29,miniearcuff,MiniEarcuff 2,Gold Clip,50000
+30,miniearcuff,MiniEarcuff 3,Crystal Clip,65000
+31,miniearcuff,MiniEarcuff 4,Simple Style,40000
+32,miniearcuff,MiniEarcuff 5,Modern Clip,55000
+33,miniearcuff,MiniEarcuff 6,Black Edition,60000
+34,miniearcuff,MiniEarcuff 7,Urban Clip,48000
+35,miniearcuff,MiniEarcuff 8,Luxury Mini,75000
+36,miniearcuff,MiniEarcuff 9,Minimal Line,42000
+37,miniearcuff,MiniEarcuff 10,Golden Edge,58000
+38,miniearcuff,MiniEarcuff 11,Diamond Touch,90000
+39,miniearcuff,MiniEarcuff 12,Soft Curve,47000
+40,miniearcuff,MiniEarcuff 13,Classic Clip,46000
+41,miniearcuff,MiniEarcuff 14,Elite Style,88000
+42,miniearcuff,MiniEarcuff 15,Silver Shine,53000
+43,miniearcuff,MiniEarcuff 16,Crystal Edge,67000
+44,miniearcuff,MiniEarcuff 17,Modern Gold,62000
+45,miniearcuff,MiniEarcuff 18,Premium Clip,79000
+46,miniearcuff,MiniEarcuff 19,Urban Gold,61000
+47,miniearcuff,MiniEarcuff 20,Simple Gold,49000
+48,miniearcuff,MiniEarcuff 21,Soft Minimal,43000
+49,miniearcuff,MiniEarcuff 22,Diamond Mini,92000
+50,miniearcuff,MiniEarcuff 23,Curve Style,52000
+51,miniearcuff,MiniEarcuff 24,Classic Shine,56000
+52,miniearcuff,MiniEarcuff 25,Gold Line,60000
+53,miniearcuff,MiniEarcuff 26,Premium Shine,85000
+54,miniearcuff,MiniEarcuff 27,Minimal Black,58000
+55,miniearcuff,MiniEarcuff 28,Elite Mini,97000
+
+56,earcof,Earcof 1,Simple Ear,40000
+57,earcof,Earcof 2,Golden Ear,55000
+58,earcof,Earcof 3,Silver Ear,48000
+59,earcof,Earcof 4,Modern Ear,60000
+60,earcof,Earcof 5,Crystal Ear,65000
+61,earcof,Earcof 6,Minimal Ear,42000
+62,earcof,Earcof 7,Premium Ear,70000
+63,earcof,Earcof 8,Elite Ear,85000
+
+64,aretes,Aretes 1,Classic Drop,70000
+65,aretes,Aretes 2,Golden Hoop,80000
+66,aretes,Aretes 3,Silver Hoop,75000
+67,aretes,Aretes 4,Diamond Drop,120000
+68,aretes,Aretes 5,Minimal Stud,60000
+69,aretes,Aretes 6,Modern Line,68000
+70,aretes,Aretes 7,Premium Gold,95000
+71,aretes,Aretes 8,Elite Shine,130000
+
+72,aretes san agustin,Aretes SA 1,Artesanal Oro,150000
+73,aretes san agustin,Aretes SA 2,Cultura Ancestral,180000
+
+74,manillas,Manilla 1,Cuero Clasico,50000
+75,manillas,Manilla 2,Tejida Artesanal,45000
+76,manillas,Manilla 3,Oro Delgado,90000
+77,manillas,Manilla 4,Plata Elegante,85000
