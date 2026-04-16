@@ -1,21 +1,33 @@
 import random
 import pandas as pd
-from chatbot.intents import responses
+from intents import responses
 
 df = pd.read_csv("data.csv")
 
 def get_random_response(intent):
     return random.choice(responses.get(intent, ["No tengo respuesta 😅"]))
 
-def buscar_por_tipo(tipo, limite=5):
+ultimo_tipo_buscado = None
+
+def buscar_por_tipo(tipo, limite=5, offset=0):
+    global ultimo_tipo_buscado
+    ultimo_tipo_buscado = tipo
+
+
     resultados = df[df['tipo'].str.contains(tipo, case=False, na=False)]
+
     if resultados.empty:
         return "No encontré productos de ese tipo 😢"
-    resultados = resultados.sort_values(by="precio")
-    respuesta = f"Te encontré estos {tipo} 💎:\n"
-    for _, row in resultados.head(limite).iterrows():
-        respuesta += f"- {row['nombre_producto']} | {row['modelo']} | ${row['precio']}\n"
-    return respuesta
+    
+    resultados_paginados = resultados.iloc[offset : offset + limite]
+
+    if resultados_paginados.empty:
+        return f"Ya te mostré todos los {tipo} que tenemos por ahora"
+
+    respuesta = f"Aquí tienes más opciones de {tipo} 💎:\n"
+    for _, row in resultados_paginados.iterrows():
+        respuesta += f"LINK|{row['nombre_producto']}|{row['precio']}|{row['tipo']}\n"
+        return respuesta
 
 def buscar_por_precio(max_precio, limite=5):
     resultados = df[df['precio'] <= max_precio]
@@ -61,10 +73,17 @@ def detectar_tipo(message):
     return None
 
 def get_response(message):
+    global ultimo_tipo_buscado
     message = message.lower()
 
     if any(word in message for word in ["hola", "buenas", "hey"]):
         return get_random_response("saludo")
+
+    if any(word in message for word in ["mas", "más", "otros", "otro", "siguiente"]):
+        if ultimo_tipo_buscado:
+            return buscar_por_tipo(ultimo_tipo_buscado, offset=5)
+        else:
+            return "Dime qué tipo de joya te gustaría ver más (anillos, aretes...)"
 
     if any(word in message for word in ["adios", "chao", "gracias"]):
         return get_random_response("despedida")

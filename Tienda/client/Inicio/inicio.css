@@ -17,8 +17,10 @@ ul {
   float: left;
   transform: scale(1.2);
   margin-bottom: 0px;
-  position: relative; /* Añadido para establecer un contexto de apilamiento */
-  z-index: 3; /* Asegura que .f esté por encima de .reng */
+  position: relative;
+  /* Añadido para establecer un contexto de apilamiento */
+  z-index: 3;
+  /* Asegura que .f esté por encima de .reng */
 }
 
 .reng {
@@ -39,24 +41,31 @@ ul {
 .reng::after {
   content: attr(data-text);
   position: absolute;
-  top: 100%; /* Sitúa el texto debajo del icono */
+  top: 100%;
+  /* Sitúa el texto debajo del icono */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  color: white; /* Cambia el color del texto a blanco */
-  font-size: 14px; /* Cambia el tamaño de la fuente del texto */
-  font-weight: bold; /* Hace el texto en negrita */
-  text-align: center; /* Centra el texto horizontalmente */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Agrega un fondo oscuro semi-transparente */
-  padding: 5px 10px; /* Agrega un espacio alrededor del texto */
-  border-radius: 5px; /* Agrega bordes redondeados al fondo del texto */
+  color: white;
+  /* Cambia el color del texto a blanco */
+  font-size: 14px;
+  /* Cambia el tamaño de la fuente del texto */
+  font-weight: bold;
+  /* Hace el texto en negrita */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+  background-color: rgba(0,
+      0,
+      0,
+      0.7);
+  /* Agrega un fondo oscuro semi-transparente */
+  padding: 5px 10px;
+  /* Agrega un espacio alrededor del texto */
+  border-radius: 5px;
+  /* Agrega bordes redondeados al fondo del texto */
   transition: opacity 0.3s;
-  z-index: 2; /* Asegura que el texto esté por encima del carrusel */
+  z-index: 2;
+  /* Asegura que el texto esté por encima del carrusel */
 }
 
 .reng:hover::after {
@@ -66,24 +75,31 @@ ul {
 .f::after {
   content: attr(data-text);
   position: absolute;
-  top: 100%; /* Sitúa el texto debajo del icono */
+  top: 100%;
+  /* Sitúa el texto debajo del icono */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  color: white; /* Cambia el color del texto a blanco */
-  font-size: 14px; /* Cambia el tamaño de la fuente del texto */
-  font-weight: bold; /* Hace el texto en negrita */
-  text-align: center; /* Centra el texto horizontalmente */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Agrega un fondo oscuro semi-transparente */
-  padding: 5px 10px; /* Agrega un espacio alrededor del texto */
-  border-radius: 5px; /* Agrega bordes redondeados al fondo del texto */
+  color: white;
+  /* Cambia el color del texto a blanco */
+  font-size: 14px;
+  /* Cambia el tamaño de la fuente del texto */
+  font-weight: bold;
+  /* Hace el texto en negrita */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+  background-color: rgba(0,
+      0,
+      0,
+      0.7);
+  /* Agrega un fondo oscuro semi-transparente */
+  padding: 5px 10px;
+  /* Agrega un espacio alrededor del texto */
+  border-radius: 5px;
+  /* Agrega bordes redondeados al fondo del texto */
   transition: opacity 0.3s;
-  z-index: 3; /* Asegura que el texto esté por encima del carrusel */
+  z-index: 3;
+  /* Asegura que el texto esté por encima del carrusel */
 }
 
 .f:hover::after {
@@ -306,10 +322,12 @@ ul {
   height: auto;
   float: left;
 }
+
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
+
 .carousel img {
   width: 100%;
   height: auto;
@@ -339,4 +357,116 @@ ul {
 
 .i:hover {
   transform: scale(1.2);
+}
+
+/* Botón Flotante */
+#chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ventana de Chat */
+#chat-window {
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  width: 320px;
+  height: 450px;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.hidden-chat {
+  display: none !important;
+}
+
+.chat-header {
+  background: #1a1a1a;
+  color: white;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 80%;
+  font-size: 14px;
+}
+
+.bot-message {
+  background: #f0f0f0;
+  align-self: flex-start;
+}
+
+.user-message {
+  background: #000;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-input-area {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  display: flex;
+}
+
+#user-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.bot-btn {
+    display: block;
+    background: #c9a44c; /* Dorado Maca */
+    color: white !important;
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    transition: background 0.3s;
+    font-weight: bold;
+    border: 1px solid #b38f3d;
+}
+
+.bot-btn:hover {
+    background: #000;
+    border-color: #c9a44c;
+}
+
+.product-link {
+    margin-top: 10px;
+}
+
+/* Mejora general de la burbuja del bot */
+.bot-message {
+    background: #f8f8f8;
+    border-left: 4px solid #c9a44c;
 }

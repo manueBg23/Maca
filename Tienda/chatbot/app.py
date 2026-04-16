@@ -1,14 +1,13 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
+from flask_cors import CORS 
 from model import RecommenderSystem
-from chatbot.bot import get_response
+from bot import get_response
 
 app = Flask(__name__)
+CORS(app)
+
 
 recommender = RecommenderSystem()
-
-@app.route("/")
-def home():
-    return render_template("index.html")
 
 @app.route("/chat", methods=["POST"])
 def chat():
